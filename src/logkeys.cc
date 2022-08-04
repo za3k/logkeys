@@ -696,7 +696,7 @@ int main(int argc, char **argv)
   }
   else if (!args.keymap.empty())  // custom keymap in use
     parse_input_keymap();
-  else
+  else if (!args.us_keymap)
     determine_system_keymap();
   
   if (args.device.empty()) {  // no device given with -d switch
